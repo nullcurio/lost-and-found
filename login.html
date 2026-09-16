@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Lost & Found Campus</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lost & Found Portal Campus</h1>
+        <p>Silakan login terlebih dahulu untuk mengakses sistem</p>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Login Pengguna / Mahasiswa</h2>
+            
+            <!-- Mengarah langsung ke index.html setelah submit -->
+            <form action="index.html" method="GET">
+                <fieldset>
+                    <legend>Masuk ke Akun Anda</legend>
+
+                    <label for="username">NIM / NIDN / Username:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Masukkan NIM atau Username" required><br><br>
+
+                    <label for="password">Kata Sandi:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi" required><br><br>
+
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Ingat Saya</label><br><br>
+
+                    <button type="submit">Masuk (Login)</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Lost & Found Campus. Dibuat untuk Tugas Proyek Pemrograman Web.</p>
+    </footer>
+
+</body>
+</html>

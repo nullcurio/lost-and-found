@@ -11,7 +11,8 @@
         <nav>
             <a href="index.html">Beranda</a> | 
             <a href="lapor.html">Laporkan Barang Ditemukan</a> | 
-            <a href="dashboard.html">Dashboard & Riwayat</a>
+            <a href="dashboard.html">Dashboard & Riwayat</a> |
+            <a href="login.html">Keluar (Logout)</a>
         </nav>
     </header>
 
@@ -20,13 +21,13 @@
     <main>
         <section>
             <h2>Formulir Pelaporan Barang Ditemukan</h2>
-            <p>Apakah Anda menemukan barang milik orang lain di area kampus? Silakan isi formulir di bawah ini untuk membantu pemiliknya menemukan kembali barang mereka.</p>
+            <p>Menemukan barang milik orang lain? Isi formulir di bawah ini dan segera serahkan barang ke Pos Satpam Pusat.</p>
 
             <form action="dashboard.html" method="POST" enctype="multipart/form-data">
 
-                <!-- Kelompok 1: Klasifikasi Barang Ditemukan -->
+                <!-- Penggabungan Blok Informasi & Detail Kejadian -->
                 <fieldset>
-                    <legend>Informasi Barang yang Ditemukan</legend>
+                    <legend>Informasi & Detail Barang yang Ditemukan</legend>
 
                     <label for="nama_barang">Nama / Jenis Barang Ditemukan:</label><br>
                     <input type="text" id="nama_barang" name="nama_barang" placeholder="Contoh: Dompet Kulit Cokelat, Flashdisk 32GB" required maxlength="60"><br><br>
@@ -39,14 +40,11 @@
                         <option value="pribadi">Pakaian & Aksesoris</option>
                         <option value="perhiasan">Perhiasan & Uang</option>
                         <option value="lainnya">Lain-lain</option>
-                    </select>
-                </fieldset>
+                    </select><br><br>
 
-                <br>
-
-                <!-- Kelompok 2: Detail Penemuan & Posisi Barang -->
-                <fieldset>
-                    <legend>Detail Lokasi & Kondisi Barang</legend>
+                    <!-- Deskripsi ditaruh tepat di bawah Kategori -->
+                    <label for="deskripsi">Deskripsi & Ciri-Ciri Khusus Barang:</label><br>
+                    <textarea id="deskripsi" name="deskripsi" rows="5" cols="45" placeholder="Sebutkan warna, merek, gantuan kunci, atau ciri khusus lainnya..." required></textarea><br><br>
 
                     <label for="tgl_ditemukan">Tanggal Ditemukan:</label><br>
                     <input type="date" id="tgl_ditemukan" name="tgl_ditemukan" required><br><br>
@@ -57,18 +55,6 @@
                     <label for="lokasi">Lokasi Spesifik Penemuan:</label><br>
                     <input type="text" id="lokasi" name="lokasi" placeholder="Misal: Meja Kantin Utama / Lab Komputer 3" required><br><br>
 
-                    <label for="posisi_barang">Posisi Barang Saat Ini:</label><br>
-                    <select id="posisi_barang" name="posisi_barang" required>
-                        <option value="">-- Dimana Barang Sekarang? --</option>
-                        <option value="dibawa_penemu">Saya Bawa Sendiri</option>
-                        <option value="satpam_pusat">Dititipkan di Pos Satpam Pusat</option>
-                        <option value="satpam_gedung">Dititipkan di Pos Satpam Gedung Terkait</option>
-                        <option value="dosen_tu">Dititipkan di Ruang TU / Dosen</option>
-                    </select><br><br>
-
-                    <label for="deskripsi">Deskripsi & Ciri-Ciri Khusus Barang:</label><br>
-                    <textarea id="deskripsi" name="deskripsi" rows="5" cols="45" placeholder="Sebutkan warna, merek, gantung kunci, atau ciri khusus lainnya..." required></textarea><br><br>
-
                     <label for="foto_barang">Unggah Foto Barang yang Ditemukan:</label><br>
                     <input type="file" id="foto_barang" name="foto_barang" accept="image/*" multiple><br>
                     <small>*Sangat dianjurkan melampirkan foto agar mudah dikenali pemiliknya.</small>
@@ -76,7 +62,7 @@
 
                 <br>
 
-                <!-- Kelompok 3: Data Penemu (Baik Hati) -->
+                <!-- Blok Informasi Penemu -->
                 <fieldset>
                     <legend>Informasi Kontak Penemu</legend>
 
@@ -93,7 +79,7 @@
                     <input type="tel" id="hp_penemu" name="hp_penemu" placeholder="081234567890" pattern="[0-9]{10,13}" title="Nomor telepon 10-13 digit" required><br><br>
 
                     <input type="checkbox" id="setuju" name="setuju" required>
-                    <label for="setuju">Saya menyatakan bahwa barang ini benar-benar saya temukan dan siap menyerahkannya kepada pemilik sah.</label>
+                    <label for="setuju">Saya bersedia menyerahkan barang ini ke Pos Satpam Pusat untuk diverifikasi pemiliknya.</label>
                 </fieldset>
 
                 <br>
