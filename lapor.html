@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Buat Laporan Baru - Lost & Found</title>
+    <title>Laporkan Barang Ditemukan - Lost & Found</title>
 </head>
 <body>
 
@@ -10,7 +10,7 @@
         <h1>Lost & Found Portal Campus</h1>
         <nav>
             <a href="index.html">Beranda</a> | 
-            <a href="lapor.html">Buat Laporan Baru</a> | 
+            <a href="lapor.html">Laporkan Barang Ditemukan</a> | 
             <a href="dashboard.html">Dashboard & Riwayat</a>
         </nav>
     </header>
@@ -19,31 +19,23 @@
 
     <main>
         <section>
-            <h2>Formulir Pelaporan Barang (Hilang / Ditemukan)</h2>
-            <p>Silakan isi data barang dan kontak Anda secara rinci agar mudah ditindaklanjuti.</p>
+            <h2>Formulir Pelaporan Barang Ditemukan</h2>
+            <p>Apakah Anda menemukan barang milik orang lain di area kampus? Silakan isi formulir di bawah ini untuk membantu pemiliknya menemukan kembali barang mereka.</p>
 
-            <!-- Form dengan pengiriman data multipart untuk berkas foto -->
             <form action="dashboard.html" method="POST" enctype="multipart/form-data">
 
-                <!-- Kelompok 1: Jenis & Klasifikasi Laporan -->
+                <!-- Kelompok 1: Klasifikasi Barang Ditemukan -->
                 <fieldset>
-                    <legend>Jenis Laporan & Kategori</legend>
+                    <legend>Informasi Barang yang Ditemukan</legend>
 
-                    <p>Tipe Laporan:</p>
-                    <input type="radio" id="type_hilang" name="tipe_laporan" value="hilang" checked>
-                    <label for="type_hilang">Saya Kehilangan Barang (Barang Hilang)</label><br>
-
-                    <input type="radio" id="type_ditemukan" name="tipe_laporan" value="ditemukan">
-                    <label for="type_ditemukan">Saya Menemukan Barang (Barang Ditemukan)</label><br><br>
-
-                    <label for="nama_barang">Nama Barang:</label><br>
-                    <input type="text" id="nama_barang" name="nama_barang" placeholder="Contoh: Flashdisk SanDisk 32GB" required maxlength="60"><br><br>
+                    <label for="nama_barang">Nama / Jenis Barang Ditemukan:</label><br>
+                    <input type="text" id="nama_barang" name="nama_barang" placeholder="Contoh: Dompet Kulit Cokelat, Flashdisk 32GB" required maxlength="60"><br><br>
 
                     <label for="kategori_select">Kategori Barang:</label><br>
                     <select id="kategori_select" name="kategori_select" required>
                         <option value="">-- Pilih Kategori --</option>
                         <option value="elektronik">Elektronik & Gadget</option>
-                        <option value="dokumen">Dokumen & Kartu Identitas</option>
+                        <option value="dokumen">Dokumen & Kartu Identitas (KTM/SIM/ATM)</option>
                         <option value="pribadi">Pakaian & Aksesoris</option>
                         <option value="perhiasan">Perhiasan & Uang</option>
                         <option value="lainnya">Lain-lain</option>
@@ -52,56 +44,61 @@
 
                 <br>
 
-                <!-- Kelompok 2: Detail Kejadian & Foto -->
+                <!-- Kelompok 2: Detail Penemuan & Posisi Barang -->
                 <fieldset>
-                    <legend>Detail Kejadian & Identifikasi</legend>
+                    <legend>Detail Lokasi & Kondisi Barang</legend>
 
-                    <label for="tgl_kejadian">Tanggal Kejadian:</label><br>
-                    <input type="date" id="tgl_kejadian" name="tgl_kejadian" required><br><br>
+                    <label for="tgl_ditemukan">Tanggal Ditemukan:</label><br>
+                    <input type="date" id="tgl_ditemukan" name="tgl_ditemukan" required><br><br>
 
-                    <label for="waktu_kejadian">Perkiraan Jam Kejadian:</label><br>
-                    <input type="time" id="waktu_kejadian" name="waktu_kejadian"><br><br>
+                    <label for="waktu_ditemukan">Waktu Ditemukan:</label><br>
+                    <input type="time" id="waktu_ditemukan" name="waktu_ditemukan"><br><br>
 
-                    <label for="lokasi">Lokasi Spesifik Kejadian:</label><br>
-                    <input type="text" id="lokasi" name="lokasi" placeholder="Misal: Kantin Utama / Lab Komputer 3" required><br><br>
+                    <label for="lokasi">Lokasi Spesifik Penemuan:</label><br>
+                    <input type="text" id="lokasi" name="lokasi" placeholder="Misal: Meja Kantin Utama / Lab Komputer 3" required><br><br>
 
-                    <label for="deskripsi">Ciri-Ciri Khusus / Deskripsi Rinci:</label><br>
-                    <textarea id="deskripsi" name="deskripsi" rows="5" cols="45" placeholder="Sebutkan warna, stiker, goresan, atau detail rahasia untuk verifikasi..." required></textarea><br><br>
+                    <label for="posisi_barang">Posisi Barang Saat Ini:</label><br>
+                    <select id="posisi_barang" name="posisi_barang" required>
+                        <option value="">-- Dimana Barang Sekarang? --</option>
+                        <option value="dibawa_penemu">Saya Bawa Sendiri</option>
+                        <option value="satpam_pusat">Dititipkan di Pos Satpam Pusat</option>
+                        <option value="satpam_gedung">Dititipkan di Pos Satpam Gedung Terkait</option>
+                        <option value="dosen_tu">Dititipkan di Ruang TU / Dosen</option>
+                    </select><br><br>
 
-                    <label for="foto_barang">Unggah Foto Barang (Opsional):</label><br>
+                    <label for="deskripsi">Deskripsi & Ciri-Ciri Khusus Barang:</label><br>
+                    <textarea id="deskripsi" name="deskripsi" rows="5" cols="45" placeholder="Sebutkan warna, merek, gantung kunci, atau ciri khusus lainnya..." required></textarea><br><br>
+
+                    <label for="foto_barang">Unggah Foto Barang yang Ditemukan:</label><br>
                     <input type="file" id="foto_barang" name="foto_barang" accept="image/*" multiple><br>
-                    <small>*Bisa pilih lebih dari 1 file foto.</small>
+                    <small>*Sangat dianjurkan melampirkan foto agar mudah dikenali pemiliknya.</small>
                 </fieldset>
 
                 <br>
 
-                <!-- Kelompok 3: Data Pelapor / Kontak -->
+                <!-- Kelompok 3: Data Penemu (Baik Hati) -->
                 <fieldset>
-                    <legend>Informasi Kontak Pelapor</legend>
+                    <legend>Informasi Kontak Penemu</legend>
 
-                    <label for="nama_pelapor">Nama Lengkap Pelapor:</label><br>
-                    <input type="text" id="nama_pelapor" name="nama_pelapor" placeholder="Masukkan nama Anda" required><br><br>
+                    <label for="nama_penemu">Nama Lengkap Penemu:</label><br>
+                    <input type="text" id="nama_penemu" name="nama_penemu" placeholder="Masukkan nama Anda" required><br><br>
 
-                    <label for="nim_pelapor">NIM / NIDN:</label><br>
-                    <input type="text" id="nim_pelapor" name="nim_pelapor" placeholder="Contoh: 2026019928" pattern="[0-9]+" title="Hanya masukkan angka NIM" required><br><br>
+                    <label for="nim_penemu">NIM / NIDN Penemu:</label><br>
+                    <input type="text" id="nim_penemu" name="nim_penemu" placeholder="Contoh: 2026019928" pattern="[0-9]+" title="Hanya masukkan angka" required><br><br>
 
-                    <label for="email_pelapor">Email Kampus / Aktif:</label><br>
-                    <input type="email" id="email_pelapor" name="email_pelapor" placeholder="nama@mahasiswa.ac.id" required><br><br>
+                    <label for="email_penemu">Email Kampus / Aktif:</label><br>
+                    <input type="email" id="email_penemu" name="email_penemu" placeholder="nama@mahasiswa.ac.id" required><br><br>
 
-                    <label for="hp_pelapor">No. WhatsApp / Telepon:</label><br>
-                    <input type="tel" id="hp_pelapor" name="hp_pelapor" placeholder="081234567890" pattern="[0-9]{10,13}" title="Nomor telepon 10-13 digit" required><br><br>
-
-                    <!-- Hidden Input untuk menandai kode sistem -->
-                    <input type="hidden" name="laporan_id" value="REF-2026-9901">
+                    <label for="hp_penemu">No. WhatsApp / Telepon:</label><br>
+                    <input type="tel" id="hp_penemu" name="hp_penemu" placeholder="081234567890" pattern="[0-9]{10,13}" title="Nomor telepon 10-13 digit" required><br><br>
 
                     <input type="checkbox" id="setuju" name="setuju" required>
-                    <label for="setuju">Saya menyatakan bahwa data yang dilaporkan adalah BENAR dan bersedia dihubungi.</label>
+                    <label for="setuju">Saya menyatakan bahwa barang ini benar-benar saya temukan dan siap menyerahkannya kepada pemilik sah.</label>
                 </fieldset>
 
                 <br>
 
-                <!-- Tombol Submit & Reset -->
-                <button type="submit">Kirimkan Laporan</button>
+                <button type="submit">Kirim Laporan Penemuan</button>
                 <button type="reset">Bersihkan Form</button>
 
             </form>
