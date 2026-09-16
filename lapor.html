@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Buat Laporan Baru - Lost & Found</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lost & Found Portal Campus</h1>
+        <nav>
+            <a href="index.html">Beranda</a> | 
+            <a href="lapor.html">Buat Laporan Baru</a> | 
+            <a href="dashboard.html">Dashboard & Riwayat</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Formulir Pelaporan Barang (Hilang / Ditemukan)</h2>
+            <p>Silakan isi data barang dan kontak Anda secara rinci agar mudah ditindaklanjuti.</p>
+
+            <!-- Form dengan pengiriman data multipart untuk berkas foto -->
+            <form action="dashboard.html" method="POST" enctype="multipart/form-data">
+
+                <!-- Kelompok 1: Jenis & Klasifikasi Laporan -->
+                <fieldset>
+                    <legend>Jenis Laporan & Kategori</legend>
+
+                    <p>Tipe Laporan:</p>
+                    <input type="radio" id="type_hilang" name="tipe_laporan" value="hilang" checked>
+                    <label for="type_hilang">Saya Kehilangan Barang (Barang Hilang)</label><br>
+
+                    <input type="radio" id="type_ditemukan" name="tipe_laporan" value="ditemukan">
+                    <label for="type_ditemukan">Saya Menemukan Barang (Barang Ditemukan)</label><br><br>
+
+                    <label for="nama_barang">Nama Barang:</label><br>
+                    <input type="text" id="nama_barang" name="nama_barang" placeholder="Contoh: Flashdisk SanDisk 32GB" required maxlength="60"><br><br>
+
+                    <label for="kategori_select">Kategori Barang:</label><br>
+                    <select id="kategori_select" name="kategori_select" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="elektronik">Elektronik & Gadget</option>
+                        <option value="dokumen">Dokumen & Kartu Identitas</option>
+                        <option value="pribadi">Pakaian & Aksesoris</option>
+                        <option value="perhiasan">Perhiasan & Uang</option>
+                        <option value="lainnya">Lain-lain</option>
+                    </select>
+                </fieldset>
+
+                <br>
+
+                <!-- Kelompok 2: Detail Kejadian & Foto -->
+                <fieldset>
+                    <legend>Detail Kejadian & Identifikasi</legend>
+
+                    <label for="tgl_kejadian">Tanggal Kejadian:</label><br>
+                    <input type="date" id="tgl_kejadian" name="tgl_kejadian" required><br><br>
+
+                    <label for="waktu_kejadian">Perkiraan Jam Kejadian:</label><br>
+                    <input type="time" id="waktu_kejadian" name="waktu_kejadian"><br><br>
+
+                    <label for="lokasi">Lokasi Spesifik Kejadian:</label><br>
+                    <input type="text" id="lokasi" name="lokasi" placeholder="Misal: Kantin Utama / Lab Komputer 3" required><br><br>
+
+                    <label for="deskripsi">Ciri-Ciri Khusus / Deskripsi Rinci:</label><br>
+                    <textarea id="deskripsi" name="deskripsi" rows="5" cols="45" placeholder="Sebutkan warna, stiker, goresan, atau detail rahasia untuk verifikasi..." required></textarea><br><br>
+
+                    <label for="foto_barang">Unggah Foto Barang (Opsional):</label><br>
+                    <input type="file" id="foto_barang" name="foto_barang" accept="image/*" multiple><br>
+                    <small>*Bisa pilih lebih dari 1 file foto.</small>
+                </fieldset>
+
+                <br>
+
+                <!-- Kelompok 3: Data Pelapor / Kontak -->
+                <fieldset>
+                    <legend>Informasi Kontak Pelapor</legend>
+
+                    <label for="nama_pelapor">Nama Lengkap Pelapor:</label><br>
+                    <input type="text" id="nama_pelapor" name="nama_pelapor" placeholder="Masukkan nama Anda" required><br><br>
+
+                    <label for="nim_pelapor">NIM / NIDN:</label><br>
+                    <input type="text" id="nim_pelapor" name="nim_pelapor" placeholder="Contoh: 2026019928" pattern="[0-9]+" title="Hanya masukkan angka NIM" required><br><br>
+
+                    <label for="email_pelapor">Email Kampus / Aktif:</label><br>
+                    <input type="email" id="email_pelapor" name="email_pelapor" placeholder="nama@mahasiswa.ac.id" required><br><br>
+
+                    <label for="hp_pelapor">No. WhatsApp / Telepon:</label><br>
+                    <input type="tel" id="hp_pelapor" name="hp_pelapor" placeholder="081234567890" pattern="[0-9]{10,13}" title="Nomor telepon 10-13 digit" required><br><br>
+
+                    <!-- Hidden Input untuk menandai kode sistem -->
+                    <input type="hidden" name="laporan_id" value="REF-2026-9901">
+
+                    <input type="checkbox" id="setuju" name="setuju" required>
+                    <label for="setuju">Saya menyatakan bahwa data yang dilaporkan adalah BENAR dan bersedia dihubungi.</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Tombol Submit & Reset -->
+                <button type="submit">Kirimkan Laporan</button>
+                <button type="reset">Bersihkan Form</button>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Lost & Found Campus. Dibuat untuk Tugas Proyek Pemrograman Web.</p>
+    </footer>
+
+</body>
+</html>

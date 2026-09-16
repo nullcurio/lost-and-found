@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Laporan - Lost & Found</title>
+</head>
+<body>
+
+    <header>
+        <h1>Lost & Found Portal Campus</h1>
+        <nav>
+            <a href="index.html">Beranda</a> | 
+            <a href="lapor.html">Buat Laporan Baru</a> | 
+            <a href="dashboard.html">Dashboard & Riwayat</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Dashboard Rekapitulasi Laporan</h2>
+            <p>Berikut adalah seluruh riwayat transaksi laporan barang hilang dan dikembalikan dalam sistem[cite: 4].</p>
+
+            <!-- Ringkasan Statistik -->
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Total Laporan Masuk</th>
+                        <th>Barang Belum Ditemukan</th>
+                        <th>Barang Ditemukan / Diamankan</th>
+                        <th>Sudah Dikembalikan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr align="center">
+                        <td>124</td>
+                        <td>45</td>
+                        <td>30</td>
+                        <td>49</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <br>
+
+        <section>
+            <h3>Tabel Log Laporan Barang</h3>
+
+            <!-- Tabel Data Utama -->
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID Laporan</th>
+                        <th>Tipe</th>
+                        <th>Nama Barang</th>
+                        <th>Pelapor</th>
+                        <th>Lokasi Kejadian</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#LF-1001</td>
+                        <td>Hilang</td>
+                        <td>Dompet Kulit Cokelat</td>
+                        <td>Ahmad Rizky</td>
+                        <td>Perpustakaan Lt. 2</td>
+                        <td>16/09/2026</td>
+                        <td><em>Proses Pencarian</em></td>
+                        <td><button type="button">Klaim / Hubungi</button></td>
+                    </tr>
+                    <tr>
+                        <td>#LF-1002</td>
+                        <td>Ditemukan</td>
+                        <td>Kunci Motor Honda</td>
+                        <td>Satpam B</td>
+                        <td>Parkir Barat</td>
+                        <td>15/09/2026</td>
+                        <td><strong>Diamankan Satpam</strong></td>
+                        <td><button type="button">Klaim / Hubungi</button></td>
+                    </tr>
+                    <tr>
+                        <td>#LF-1003</td>
+                        <td>Hilang</td>
+                        <td>KTM NIM 202601009</td>
+                        <td>Siti Aminah</td>
+                        <td>Kantin Utama</td>
+                        <td>14/09/2026</td>
+                        <td><strong>Selesai (Dikembalikan)</strong></td>
+                        <td><button type="button" disabled>Selesai</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Lost & Found Campus. Dibuat untuk Tugas Proyek Pemrograman Web.</p>
+    </footer>
+
+</body>
+</html>

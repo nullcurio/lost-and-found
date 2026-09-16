@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Beranda - Lost & Found Campus</title>
+</head>
+<body>
+
+    <!-- Header & Navigasi Utama -->
+    <header>
+        <h1>Lost & Found Portal Campus</h1>
+        <p>Pusat Informasi & Pelaporan Barang Hilang atau Ditemukan di Lingkungan Kampus</p>
+        <nav>
+            <a href="index.html">Beranda</a> | 
+            <a href="lapor.html">Buat Laporan Baru</a> | 
+            <a href="dashboard.html">Dashboard & Riwayat</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- Section Hero/Pengantar -->
+        <section>
+            <h2>Selamat Datang di Portal Lost & Found</h2>
+            <p>Kehilangan barang di area kampus? Atau menemukan barang milik orang lain? Laporkan segera melalui platform ini untuk mempercepat proses pengembalian!</p>
+        </section>
+
+        <!-- Section Pencarian & Filter Cepat -->
+        <section>
+            <h3>Cari Barang Hilang / Ditemukan</h3>
+            <form action="index.html" method="GET">
+                <label for="search">Kata Kunci:</label>
+                <input type="search" id="search" name="q" placeholder="Cari misal: Dompet, Kunci, Tumbler...">
+
+                <label for="kategori">Kategori:</label>
+                <select id="kategori" name="kategori">
+                    <option value="">-- Semua Kategori --</option>
+                    <option value="elektronik">Elektronik & Gadget</option>
+                    <option value="dokumen">Dokumen & Kartu Identitas</option>
+                    <option value="pribadi">Pakaian & Aksesoris</option>
+                    <option value="lainnya">Lain-lain</option>
+                </select>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="">-- Semua Status --</option>
+                    <option value="hilang">Hilang</option>
+                    <option value="ditemukan">Ditemukan</option>
+                </select>
+
+                <button type="submit">Cari Barang</button>
+            </form>
+        </section>
+
+        <br>
+
+        <!-- Section Daftar Laporan Terbaru -->
+        <section>
+            <h2>Laporan Terbaru</h2>
+
+            <!-- Artikel 1: Barang Hilang -->
+            <article>
+                <header>
+                    <h3>[HILANG] Dompet Kulit Cokelat</h3>
+                    <p><small>Dipublikasikan: 16 September 2026 | Oleh: Ahmad Rizky</small></p>
+                </header>
+                <figure>
+                    <img src="https://via.placeholder.com/150" alt="Foto Dompet Cokelat">
+                    <figcaption>Foto ilustrasi dompet yang hilang</figcaption>
+                </figure>
+                <p><strong>Lokasi Terakhir:</strong> Area Gedung Perpustakaan Lantai 2</p>
+                <p><strong>Deskripsi:</strong> Berisi KTM atas nama Ahmad Rizky, kartu ATM, dan sejumlah uang tunai. Bagi yang menemukan mohon hubungi saya.</p>
+                <a href="#">Detail & Klaim Barang &raquo;</a>
+            </article>
+
+            <hr>
+
+            <!-- Artikel 2: Barang Ditemukan -->
+            <article>
+                <header>
+                    <h3>[DITEMUKAN] Kunci Motor Honda</h3>
+                    <p><small>Dipublikasikan: 15 September 2026 | Oleh: Satpam Gedung B</small></p>
+                </header>
+                <figure>
+                    <img src="https://via.placeholder.com/150" alt="Foto Kunci Motor">
+                    <figcaption>Kunci motor dengan gantungan anime</figcaption>
+                </figure>
+                <p><strong>Lokasi Ditemukan:</strong> Parkiran Parkir Barat Kampus</p>
+                <p><strong>Deskripsi:</strong> Ditemukan tergeletak di samping tiang listrik parkiran motor. Sekarang diamankan di Pos Satpam Utama.</p>
+                <a href="#">Detail & Klaim Barang &raquo;</a>
+            </article>
+        </section>
+
+        <!-- Sidebar Informasi Tambahan -->
+        <aside>
+            <h3>Fakta & Alur Pengambilan</h3>
+            <p>Jika Anda merasa memiliki barang yang ada di portal ini, silakan datang ke Pos Satpam Pusat dengan membawa KTM/Kartu Identitas asli untuk verifikasi kepemilikan.</p>
+        </aside>
+    </main>
+
+    <hr>
+
+    <!-- Footer Semantik -->
+    <footer>
+        <p>&copy; 2026 Lost & Found Campus. Dibuat untuk Tugas Proyek Pemrograman Web.</p>
+    </footer>
+
+</body>
+</html>
