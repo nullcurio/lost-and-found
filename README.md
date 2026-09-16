@@ -1,4 +1,4 @@
-# Lost & Found Portal Campus
+# PNC Lost & Found Portal Campus
 
 Sistem informasi dan formulir pelaporan barang hilang/ditemukan di area kampus berbasis **HTML5 Murni (Tanpa CSS & JavaScript)**.
 
